@@ -1,36 +1,28 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://api.devshop.dev/
 
 # devshopAPI
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+API responsavél por efetuar operações para comércio eletrônico de desenvolvedores.
 
-## Questions Collection [/questions]
+## Coleção de Desenvolvedores [/developers?q=faelribeiro22&page=1&language=javascript&company=vitta]
 
-### List All Questions [GET]
+### Lista todos os desenvolvedores que possuem os filtros [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
+                "name": "Rafael Ribeiro de Sousa",
+                "company": "Vitta",
+                "value": 22.3,
+                "picture": "https://avatars1.githubusercontent.com/u/10289821?v=4",
+                "languages": ["javascript", "C", "java", "html"]
+            },
+            "page": 1,
+            "currentPage": 1,
+            "nextPage": 2,
+            "previousPage": 0
         ]
 
 ### Create a New Question [POST]
